@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainController" id="BYZ-38-t0r" customClass="ViewController" customModule="OpenInChromeSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2G-pt-EYM">
+                                <rect key="frame" x="281" y="96" width="38" height="30"/>
+                                <state key="normal" title="Open">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="open:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wwW-Nc-jgR"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeX-jv-FYT">
+                                <rect key="frame" x="16" y="163" width="568" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="uBH-rg-a37"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chrome Installation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaJ-qi-ZgF">
+                                <rect key="frame" x="16" y="134" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://github.com/" borderStyle="roundedRect" placeholder="Enter URL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r87-EI-ewr">
+                                <rect key="frame" x="16" y="50" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sna-Zb-rDL"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qeX-jv-FYT" secondAttribute="bottom" constant="309" id="0kt-BM-Tju"/>
+                            <constraint firstItem="qeX-jv-FYT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Nb-yl-Hz5"/>
+                            <constraint firstItem="qeX-jv-FYT" firstAttribute="top" secondItem="XaJ-qi-ZgF" secondAttribute="bottom" constant="8" id="A5s-kB-0Ir"/>
+                            <constraint firstItem="K2G-pt-EYM" firstAttribute="top" secondItem="r87-EI-ewr" secondAttribute="bottom" constant="16" id="BLk-Tu-5OI"/>
+                            <constraint firstAttribute="centerX" secondItem="K2G-pt-EYM" secondAttribute="centerX" id="C00-Es-yyE"/>
+                            <constraint firstItem="r87-EI-ewr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Dcp-2E-dfn"/>
+                            <constraint firstItem="XaJ-qi-ZgF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="G7K-Wy-shW"/>
+                            <constraint firstItem="XaJ-qi-ZgF" firstAttribute="top" secondItem="K2G-pt-EYM" secondAttribute="bottom" constant="8" id="Li8-IZ-pOw"/>
+                            <constraint firstItem="qeX-jv-FYT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ozu-8D-Wsb"/>
+                            <constraint firstItem="r87-EI-ewr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="aaU-gk-OfD"/>
+                            <constraint firstItem="r87-EI-ewr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="epo-Qd-bJ4"/>
+                            <constraint firstItem="XaJ-qi-ZgF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gbK-tq-7MN"/>
+                            <constraint firstItem="r87-EI-ewr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kwK-N4-2f9"/>
+                            <constraint firstAttribute="centerY" secondItem="K2G-pt-EYM" secondAttribute="centerY" id="stQ-OE-MWR"/>
+                            <constraint firstItem="qeX-jv-FYT" firstAttribute="top" secondItem="K2G-pt-EYM" secondAttribute="bottom" constant="31" id="zSK-Di-chY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="aaU-gk-OfD"/>
+                                <exclude reference="zSK-Di-chY"/>
+                                <exclude reference="stQ-OE-MWR"/>
+                                <exclude reference="0kt-BM-Tju"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="chromeInstallationLabel" destination="XaJ-qi-ZgF" id="eo6-VK-Vgf"/>
+                        <outlet property="logView" destination="qeX-jv-FYT" id="iZ2-Ym-MEs"/>
+                        <outlet property="openButton" destination="K2G-pt-EYM" id="PDh-3Y-vOS"/>
+                        <outlet property="urlInput" destination="r87-EI-ewr" id="Fzk-a7-whw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
