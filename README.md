@@ -5,7 +5,7 @@ This repo is a rewritten version of Google's [OpenInChrome](https://github.com/G
 * Xcode 6.3+ (Swift 1.2+)
 
 ## Downloading the class file ##
-The OpenInChromeController class file is available [here](https://github.com/cezheng/OpenInChromeSwift/OpenInChromeController.swift). Copy it into your Xcode installation.
+The OpenInChromeController class file is available [here](https://github.com/cezheng/OpenInChromeSwift/blob/master/OpenInChromeController.swift). Copy it into your Xcode installation.
 
 ## Usage ##
 Use the OpenInChromeController class as follows:
