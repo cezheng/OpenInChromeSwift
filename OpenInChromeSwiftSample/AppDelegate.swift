@@ -24,10 +24,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         let mainViewController = self.window?.rootViewController as? ViewController
         if (mainViewController != nil) {
-            mainViewController!.log("[Callback] Called with URL: \(url.absoluteString!)\n")
+            mainViewController!.log("[Callback] Called with URL: \(url.absoluteString)\n")
         }
         return true
     }

@@ -14,16 +14,6 @@
 		790CE87C1AFB232B007EF8B1 /* OpenInChromeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790CE87B1AFB232B007EF8B1 /* OpenInChromeController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		790CE86C1AFB2306007EF8B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 790CE84E1AFB2306007EF8B1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 790CE8551AFB2306007EF8B1;
-			remoteInfo = OpenInChromeSwiftSample;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		790CE8561AFB2306007EF8B1 /* OpenInChromeSwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenInChromeSwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		790CE85A1AFB2306007EF8B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,19 +21,11 @@
 		790CE85D1AFB2306007EF8B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		790CE8601AFB2306007EF8B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		790CE8621AFB2306007EF8B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		790CE86B1AFB2306007EF8B1 /* OpenInChromeSwiftSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenInChromeSwiftSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		790CE87B1AFB232B007EF8B1 /* OpenInChromeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenInChromeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		790CE8531AFB2306007EF8B1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		790CE8681AFB2306007EF8B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -66,7 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				790CE8561AFB2306007EF8B1 /* OpenInChromeSwiftSample.app */,
-				790CE86B1AFB2306007EF8B1 /* OpenInChromeSwiftSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,39 +92,18 @@
 			productReference = 790CE8561AFB2306007EF8B1 /* OpenInChromeSwiftSample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		790CE86A1AFB2306007EF8B1 /* OpenInChromeSwiftSampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 790CE8781AFB2306007EF8B1 /* Build configuration list for PBXNativeTarget "OpenInChromeSwiftSampleTests" */;
-			buildPhases = (
-				790CE8671AFB2306007EF8B1 /* Sources */,
-				790CE8681AFB2306007EF8B1 /* Frameworks */,
-				790CE8691AFB2306007EF8B1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				790CE86D1AFB2306007EF8B1 /* PBXTargetDependency */,
-			);
-			name = OpenInChromeSwiftSampleTests;
-			productName = OpenInChromeSwiftSampleTests;
-			productReference = 790CE86B1AFB2306007EF8B1 /* OpenInChromeSwiftSampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		790CE84E1AFB2306007EF8B1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Ce Zheng";
 				TargetAttributes = {
 					790CE8551AFB2306007EF8B1 = {
 						CreatedOnToolsVersion = 6.3;
-					};
-					790CE86A1AFB2306007EF8B1 = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = 790CE8551AFB2306007EF8B1;
 					};
 				};
 			};
@@ -161,7 +121,6 @@
 			projectRoot = "";
 			targets = (
 				790CE8551AFB2306007EF8B1 /* OpenInChromeSwiftSample */,
-				790CE86A1AFB2306007EF8B1 /* OpenInChromeSwiftSampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -173,13 +132,6 @@
 			files = (
 				790CE8611AFB2306007EF8B1 /* Main.storyboard in Resources */,
 				790CE8631AFB2306007EF8B1 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		790CE8691AFB2306007EF8B1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,22 +148,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		790CE8671AFB2306007EF8B1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		790CE86D1AFB2306007EF8B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 790CE8551AFB2306007EF8B1 /* OpenInChromeSwiftSample */;
-			targetProxy = 790CE86C1AFB2306007EF8B1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		790CE85F1AFB2306007EF8B1 /* Main.storyboard */ = {
@@ -246,6 +183,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -320,6 +258,7 @@
 				);
 				INFOPLIST_FILE = OpenInChromeSwiftSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.ce.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -337,42 +276,9 @@
 				);
 				INFOPLIST_FILE = OpenInChromeSwiftSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.ce.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-			};
-			name = Release;
-		};
-		790CE8791AFB2306007EF8B1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = OpenInChromeSwiftSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenInChromeSwiftSample.app/OpenInChromeSwiftSample";
-			};
-			name = Debug;
-		};
-		790CE87A1AFB2306007EF8B1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = OpenInChromeSwiftSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenInChromeSwiftSample.app/OpenInChromeSwiftSample";
 			};
 			name = Release;
 		};
@@ -393,15 +299,6 @@
 			buildConfigurations = (
 				790CE8761AFB2306007EF8B1 /* Debug */,
 				790CE8771AFB2306007EF8B1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		790CE8781AFB2306007EF8B1 /* Build configuration list for PBXNativeTarget "OpenInChromeSwiftSampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				790CE8791AFB2306007EF8B1 /* Debug */,
-				790CE87A1AFB2306007EF8B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

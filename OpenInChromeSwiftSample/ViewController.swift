@@ -26,17 +26,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var logView: UITextView!
     @IBOutlet weak var openButton: UIButton!
     @IBAction func open(sender: UIButton) {
-        let inputURL = NSURL(string: urlInput.text)!
+        let inputURL = NSURL(string: urlInput.text!)!
         let callbackURL = NSURL(string: "opcsample://")
-        if (!OpenInChromeController.sharedInstance.openInChrome(inputURL, callbackURL: callbackURL, createNewTab: true)) {
-            log("[Failed] Cannot open \(inputURL.absoluteString!) in Google Chrome. Will try to open it with system openURL")
+        if !OpenInChromeController.sharedInstance.openInChrome(inputURL, callbackURL: callbackURL, createNewTab: true) {
+            log("[Failed] Cannot open \(inputURL.absoluteString) in Google Chrome. Will try to open it with system openURL")
             if (UIApplication.sharedApplication().openURL(inputURL)) {
-                log("[Success] Opened \(inputURL.absoluteString!) by system openURL.")
+                log("[Success] Opened \(inputURL.absoluteString) by system openURL.")
             } else {
-                log("[Failed] Cannot open \(inputURL.absoluteString!) by sysmte openURL.")
+                log("[Failed] Cannot open \(inputURL.absoluteString) by system openURL.")
             }
         } else {
-            log("[Success] Opened \(inputURL.absoluteString!) in Google Chrome.")
+            log("[Success] Opened \(inputURL.absoluteString) in Google Chrome.")
         }
     }
     
@@ -47,7 +47,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func detectChromeInstallation() {
-        if (OpenInChromeController.sharedInstance.isChromeInstalled()) {
+        if OpenInChromeController.sharedInstance.isChromeInstalled() {
             chromeInstallationLabel.text = "Google Chrome is installed.";
         } else {
             chromeInstallationLabel.text = "Google Chrome is not installed. http and https urls will be opened in Safari.";
@@ -56,7 +56,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func log(text: String) {
         logView.text = logView.text + text + "\n";
-        logView.scrollRangeToVisible(NSRange(location: count(logView.text), length: 1))
+        logView.scrollRangeToVisible(NSRange(location: logView.text.characters.count, length: 1))
         NSLog(logView.text)
     }
     
@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         view.endEditing(true)
         super.touchesBegan(touches, withEvent: event)
     }
