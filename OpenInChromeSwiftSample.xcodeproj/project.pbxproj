@@ -104,6 +104,7 @@
 				TargetAttributes = {
 					790CE8551AFB2306007EF8B1 = {
 						CreatedOnToolsVersion = 6.3;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -261,6 +262,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.ce.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -279,6 +281,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.ce.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
