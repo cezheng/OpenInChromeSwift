@@ -14,3 +14,15 @@ if (openInController_.isChromeInstalled()) {
   openInController_.openInChrome(urlToOpen, callbackURL: callbackURL, createNewTab: createNewTab)
 }
 ```
+
+Add this to your application's Info.plist
+```
+  <key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>googlechrome</string>
+		<string>googlechromes</string>
+		<string>googlechrome-x-callback</string>
+	</array>
+ ```
+ 
+ 
