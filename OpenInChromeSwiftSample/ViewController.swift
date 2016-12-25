@@ -25,12 +25,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var chromeInstallationLabel: UILabel!
     @IBOutlet weak var logView: UITextView!
     @IBOutlet weak var openButton: UIButton!
-    @IBAction func open(sender: UIButton) {
-        let inputURL = NSURL(string: urlInput.text!)!
-        let callbackURL = NSURL(string: "opcsample://")
+    @IBAction func open(_ sender: UIButton) {
+        let inputURL = URL(string: urlInput.text!)!
+        let callbackURL = URL(string: "opcsample://")
         if !OpenInChromeController.sharedInstance.openInChrome(inputURL, callbackURL: callbackURL, createNewTab: true) {
             log("[Failed] Cannot open \(inputURL.absoluteString) in Google Chrome. Will try to open it with system openURL")
-            if (UIApplication.sharedApplication().openURL(inputURL)) {
+            if (UIApplication.shared.openURL(inputURL)) {
                 log("[Success] Opened \(inputURL.absoluteString) by system openURL.")
             } else {
                 log("[Failed] Cannot open \(inputURL.absoluteString) by system openURL.")
@@ -40,7 +40,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         urlInput.delegate = self as UITextFieldDelegate
         detectChromeInstallation();
@@ -54,20 +54,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func log(text: String) {
+    func log(_ text: String) {
         logView.text = logView.text + text + "\n";
         logView.scrollRangeToVisible(NSRange(location: logView.text.characters.count, length: 1))
         NSLog(logView.text)
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
-        super.touchesBegan(touches, withEvent: event)
+        super.touchesBegan(touches, with: event)
     }
 }
 
