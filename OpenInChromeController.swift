@@ -36,7 +36,7 @@ private let googleChromeHTTPSScheme: String = "googlechromes:"
 private let googleChromeCallbackScheme: String = "googlechrome-x-callback:"
 
 private func encodeByAddingPercentEscapes(_ input: String?) -> String {
-    return CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, input as CFString!, nil, "!*'();:@&=+$,/?%#[]" as CFString!, CFStringConvertNSStringEncodingToEncoding(String.Encoding.utf8.rawValue)) as String;
+    return input!.addingPercentEncoding(withAllowedCharacters: CharacterSet(charactersIn: "!*'();:@&=+$,/?%#[]"))!
 }
 
 open class OpenInChromeController {
